@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+<H3>Hier vul je een naam in</H3>
+<form method="post" action='/answer'>
+	<input type="text" name="name" placeholder="Show some Love "/></br></br>
+	<button name="submit">Send</button>
+</form>
+
+{% endblock sidebar %}
+{% block content %}
+<div class="container">
+	<h1>Dit is in een template layout</h1>
+	<p> De inhoud van deze pagina is nog niet bepaald<p>
+</div>
+{% endblock content %}

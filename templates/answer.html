@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+<H3>Hier vul je een naam in</H3>
+<form method="post" action='{{url_for("answer")}}'>
+	<input type="text" name="name" placeholder="Show some Love "/></br></br>
+	<button name="submit">Send</button>
+</form>
+
+{% endblock sidebar %}
+{% block content %}
+<div class="container">  
+		<h2>Notities</h2>
+		{% for note in notes %}
+		<ul class='liat'> 
+			<li><b>{{note}}</b></li>
+		</ul>	
+		{% endfor %}
+</div>
+{% endblock content %}
